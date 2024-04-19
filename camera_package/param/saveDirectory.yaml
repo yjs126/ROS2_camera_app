@@ -1,0 +1,3 @@
+img_capture_service_server:
+  ros__parameters:
+    path: '/home/addinedu/ros2/camera_ws/album/'
