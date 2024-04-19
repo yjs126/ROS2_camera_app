@@ -24,28 +24,24 @@ Create album, src folder below
 Go to "/camera_ws" path
 - step4  
 Build on the workspace path
-<pre>
-  <code>
-    yourpc@yourid:~/../camera_ws$ colcon build
-  </code>
-</pre>
+
+```bash  
+  yourpc@yourid:~/../camera_ws$ colcon build
+```
+
 - step5  
 "Build", "install", "log" folders are created  
 ![Screenshot from 2024-04-19 17-05-14](https://github.com/yjs126/ROS2_camera_app/assets/156267935/6abddcf7-2de5-4e88-8a10-6edb13d46a6d)
 ---
 ## Use Manual
 #### 1. To bring up the ros2 environment, run setup.bash
-<pre>
-  <code>
+```bash
     yourpc@yourid:~$ source ~/../camera_ws/install/local_setup.bash
-  </code>
-</pre>
+```
 #### 2. Launch camera.launch.py file
-<pre>
-  <code>
+```bash
     yourpc@yourid:~/../camera_ws$ ros2 launch camera_package camera.launch.py
-  </code>
-</pre>
+```
 #### 3. Open "rqt" Image View
    
 #### 4. Select camera filter topic
@@ -56,14 +52,12 @@ Build on the workspace path
 - cap : image capture
 - rec : start recording
 - stop : stop recording
-<pre>
-  <code>
+```bash
     yourpc@yourid:~/../camera_ws$ ros2 service call /img_capture camera_package_msgs/srv/Capture {"mode: cap"}
 
     yourpc@yourid:~/../camera_ws$ ros2 service call /img_capture camera_package_msgs/srv/Capture {"mode: rec"}
 
     yourpc@yourid:~/../camera_ws$ ros2 service call /img_capture camera_package_msgs/srv/Capture {"mode: stop"}
-  </code>
-</pre>
+```
 ---
 
